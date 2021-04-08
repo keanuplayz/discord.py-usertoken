@@ -10,7 +10,7 @@ A basic wrapper for the Discord API.
 """
 
 __title__ = 'discord'
-__author__ = 'Rapptz'
+__author__ = 'keanucode'
 __license__ = 'MIT'
 __copyright__ = 'Copyright 2015-present Rapptz'
 __version__ = '2.0.0a'
@@ -20,29 +20,31 @@ __path__ = __import__('pkgutil').extend_path(__path__, __name__)
 from collections import namedtuple
 import logging
 
-from .client import *
-from .appinfo import *
-from .user import *
-from .emoji import *
-from .partial_emoji import *
+from .partial_emoji import PartialEmoji
+from .emoji import Emoji
+from .user import User, ClientUser, Profile
+from .appinfo import AppInfo
+from .client import Client
 from .activity import *
 from .channel import *
 from .guild import *
 from .flags import *
-from .member import *
+from .relationship import Relationship
+from .member import Member, VoiceState
 from .message import *
 from .asset import *
 from .errors import *
-from .permissions import *
-from .role import *
-from .file import *
-from .colour import *
-from .integrations import *
-from .invite import *
-from .template import *
-from .widget import *
-from .object import *
-from .reaction import *
+from .calls import CallMessage, GroupCall
+from .permissions import Permissions, PermissionOverwrite
+from .role import Role, RoleTags
+from .file import File
+from .colour import Color, Colour
+from .integrations import Integration, IntegrationAccount
+from .invite import Invite, PartialInviteChannel, PartialInviteGuild
+from .template import Template
+from .widget import Widget, WidgetMember, WidgetChannel
+from .object import Object
+from .reaction import Reaction
 from . import utils, opus, abc
 from .enums import *
 from .embeds import *
